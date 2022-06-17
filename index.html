@@ -7,11 +7,10 @@
     <title>Formulário de Feedback</title>
 
     <link rel="stylesheet" href="./style.css" />
-    <link rel="script" href="script.js" />
   </head>
   <body>
     <header>
-      <section class="container">
+      <section class="containerIndex" id="header">
         <h1>Formulário de feedback sobre estágios!</h1>
         <p class="paragraph">
           Estou interessado em receber seu feedback sobre sua experiência nos
@@ -49,18 +48,240 @@
           </li>
         </ul>
         <h2>Quero fornecer feedback sobre:</h2>
-        <div class="nav">
-          <a class="button" href="./estagio1Mauricio.html"
-            >Preceptor Maurício (Estágio 1)</a
-          >
-          <a class="button" href="./estagio1Mariana.html"
-            >Preceptora Mariana (Estágio 1)</a
-          >
-          <a class="button" href="./estagio3Mauricio.html"
-            >Preceptor Maurício (Estágio 3)</a
-          >
+        <div class="navEstagio" id="SelectorEstagio">
+          <button class="button" onclick="selectorEstagio1()">
+            Estagio 1
+          </button>
+
+          <button class="button" onclick="selectorEstagio3()">
+            Estágio 3
+          </button>
+        </div>
+        <div class="navPreceptorEstagio1-hidden" id="Estagio1" >
+          <button onclick="selectorEstagio1Mauricio()" class="button">
+           Mauricio             
+          </button>
+
+          <button class="button" onclick="selectorEstagio1Mariana()">
+            Mariana
+          </button>
+        </div>
+        
+        <div class="navPreceptorEstagio3-hidden" id="Estagio3">
+            <button class="button" onclick="selectorEstagio3Mauricio()">
+             Mauricio            
+            </button>
+              
+            <button class="button" onclick="selectorEstagio3Bianca()">
+              Bianca
+            </button>
+          
         </div>
       </section>
     </header>
+    <section  class="containerEstagio1Mauricio-hidden" id="containerEstagio1Mauricio">
+      <div class="navInicio">
+        <a class="buttonInicio" href="./index.html">Retornar ao início</a>
+      </div>
+      <form action="https://formsubmit.co/mauricio.schell@uniritter.edu.br" method="POST"/>
+          <p class="paragraphImput">
+            De forma geral ao longo do semestre, quais pontos positivos você
+            destacaria de sua experiência no estágio 1?
+          </p>
+          <input
+            type="text"
+            name="PontosPositivos"
+            placeholder="Escreva seu feedback aqui"
+          />
+          <p class="paragraphImput">
+            De forma geral ao longo do semestre, quais pontos negativos você
+            destacaria de sua experiência no estágio 1?
+          </p>
+          <input
+            type="text"
+            name="PontosNegativos"
+            placeholder="Escreva seu feedback aqui"
+          />
+          <p class="paragraphImput">
+            Você tem alguma sugestão do que pode ser melhorado e de que forma?
+          </p>
+          <input
+            type="text"
+            name="Sugestão"
+            placeholder="Escreva seu feedback aqui"
+          />
+          <p class="paragraphImput">
+            Falando especificamente sobre as atividades no condomínio PARETE, você
+            tem algum feedback sobre pontos positivos, negativos ou sugestões?
+          </p>
+          <input
+            type="text"
+            name="PARETE"
+            placeholder="Escreva seu feedback aqui"
+          />
+          <p class="paragraphImput">
+            Falando especificamente sobre as atividades na CENCOR, você tem algum
+            feedback sobre pontos positivos, negativos ou sugestões?
+          </p>
+          <input
+            type="text"
+            name="CENCOR"
+            placeholder="Escreva seu feedback aqui"
+          />
+          <p class="paragraphImput">
+            Há algo mais que você queira dizer e que eu não perguntei?
+          </p>
+          <input
+            type="text"
+            name="Comentário Livre"
+            id="pontos+"
+            placeholder="Escreva seu feedback aqui"
+          />
+          <button class="buttonEnviar" type="submit">Enviar Resposta</button>
+      </form>
+    </section>
+    <section class="containerEstagio1Mariana-hidden" id="containerEstagio1Mariana" >
+      <div class="navInicio">
+        <a class="buttonInicio" href="./index.html">Retornar ao início</a>
+      </div>
+      <form action="https://formsubmit.co/mariana.jorge@uniritter.edu.br" method="POST" />
+        <p  class="paragraphImput">
+          De forma geral ao longo do semestre, quais pontos positivos você
+          destacaria de sua experiência no estágio 1?
+        </p>
+        <input
+          type="text"
+          name="PontosPositivos"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          De forma geral ao longo do semestre, quais pontos negativos você
+          destacaria de sua experiência no estágio 1?
+        </p>
+        <input
+          type="text"
+          name="PontosNegativos"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          Você tem alguma sugestão do que pode ser melhorado e de que forma?
+        </p>
+        <input
+          type="text"
+          name="Sugestão"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          Falando especificamente sobre as atividades no condomínio PARETE, você
+          tem algum feedback sobre pontos positivos, negativos ou sugestões?
+        </p>
+        <input
+          type="text"
+          name="PARETE"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          Falando especificamente sobre as atividades na TERMOLAR, você tem algum
+          feedback sobre pontos positivos, negativos ou sugestões?
+        </p>
+        <input
+          type="text"
+          name="TERMOLAR"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">Há algo mais que você queira dizer e que eu não perguntei?</p>
+        <input
+          type="text"
+          name="Comentário Livre"
+          id="pontos+"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <button type="submit">Enviar respostas</button>
+      </form>
+    </section>
+    <section class="containerEstagio3Mauricio-hidden" id="containerEstagio3Mauricio">
+      <div class="navInicio">
+        <a class="buttonInicio" href="./index.html">Retornar ao início</a>
+      </div>
+      <form action="https://formsubmit.co/mauricio.schell@uniritter.edu.br" method="POST" />
+        <p class="paragraphImput">
+          De forma geral ao longo do semestre, quais pontos positivos você
+          destacaria de sua experiência no estágio 3 (No serviço escola da Zona Sul)?
+        </p>
+        <input
+          type="text"
+          name="PontosPositivos"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          De forma geral ao longo do semestre, quais pontos negativos você
+          destacaria de sua experiência no estágio 3 (No serviço escola da Zona Sul)?
+        </p>
+        <input
+          type="text"
+          name="PontosNegativos"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          Você tem alguma sugestão do que pode ser melhorado e de que forma?
+        </p>
+        <input
+          type="text"
+          name="Sugestão"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">Há algo mais que você queira dizer e que eu não perguntei?</p>
+        <input
+          type="text"
+          name="Comentário Livre"
+          id="pontos+"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <button type="submit">Enviar respostas</button>
+      </form>
+    </section>
+    <section class="containerEstagio3Bianca-hidden" id="containerEstagio3Bianca">
+      <div class="navInicio">
+        <a class="buttonInicio" href="./index.html">Retornar ao início</a>
+      </div>
+      <form action="https://formsubmit.co/bianca.lima@ecossistemaanima.com.br" method="POST" />
+        <p class="paragraphImput">
+          De forma geral ao longo do semestre, quais pontos positivos você
+          destacaria de sua experiência no estágio 3 (na Casa do Menino Jesus de Praga)?
+        </p>
+        <input
+          type="text"
+          name="PontosPositivos"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          De forma geral ao longo do semestre, quais pontos negativos você
+          destacaria de sua experiência no estágio 3 (na Casa do Menino Jesus de Praga)?
+        </p>
+        <input
+          type="text"
+          name="PontosNegativos"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">
+          Você tem alguma sugestão do que pode ser melhorado e de que forma?
+        </p>
+        <input
+          type="text"
+          name="Sugestão"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <p class="paragraphImput">Há algo mais que você queira dizer e que eu não perguntei?</p>
+        <input
+          type="text"
+          name="Comentário Livre"
+          id="pontos+"
+          placeholder="Escreva seu feedback aqui"
+        />
+        <button type="submit">Enviar respostas</button >
+      </form>
+    </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
